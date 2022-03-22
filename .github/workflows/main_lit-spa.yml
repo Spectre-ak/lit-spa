@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_b1558e4dcc6141488da508fb304a676a }}/appsvc/staticsite:${{ github.sha }}
+        tags: mcr.microsoft.com/appsvc/staticsite:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -48,4 +48,4 @@ jobs:
         app-name: 'lit-spa'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_34f5bcb164cb4eda9b70b0c181c51146 }}
-        images: 'mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_b1558e4dcc6141488da508fb304a676a }}/appsvc/staticsite:${{ github.sha }}'
+        images: 'mcr.microsoft.com/appsvc/staticsite:${{ github.sha }}'
