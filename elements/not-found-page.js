@@ -7,7 +7,7 @@
 import {LitElement, html, css} from 'lit';
 
 
-export class MyElement extends LitElement {
+export class NotFound extends LitElement {
   static get styles() {
     return css``;
   }
@@ -46,4 +46,4 @@ export class MyElement extends LitElement {
 
 }
 
-window.customElements.define('my-element', MyElement);
+window.customElements.define('not-found-page', NotFound);

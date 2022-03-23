@@ -16,6 +16,6 @@ router.setRoutes([
   {path: '/roadmap', component: 'roadmap-base'},
   {path: '/metrics', component: 'stats-base'},
   {path: '/feature/:featureId', component: 'chrome-feature'},
-  {path: '(.*)', component: 'my-element'}
+  {path: '(.*)', component: 'not-found-page'}
 ]);
 
