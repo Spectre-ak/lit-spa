@@ -26,7 +26,7 @@ export class NavbarTopBase extends LitElement {
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <ul class="navbar-nav">
                 <li>
-                    <a class="navbar-brand" href="/features" style="font-size: 25px;">Chrome Platform Status</a>
+                    <a class="navbar-brand" href="/features" style="font-size: 25px;"><img style=" margin-bottom: -5px;" src="https://chromestatus.com/static/img/chrome_logo.svg" width="30px"/> Chrome Platform Status</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/roadmap">Roadmap</a>
