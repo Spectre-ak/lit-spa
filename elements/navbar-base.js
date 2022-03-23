@@ -1,7 +1,11 @@
 import {html, css, LitElement} from 'lit';
 
 export class NavbarTopBase extends LitElement {
-  static styles = css`p { color: blue }`;
+  static styles = css`
+  nav ul {list-style-type: none;margin: 0;overflow: hidden;background-color: #333;}
+  nav ul li a {clear float: right;}
+  nav ul li  a {display: block;color: white;text-align: center;padding: 14px 16px;}
+  nav ul li {display: inline-block;}`;
 
   static properties = {
     text: {type: String},
@@ -17,12 +21,10 @@ export class NavbarTopBase extends LitElement {
   render() {
     return html`
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/features">Google Chrome</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
+                <li>
+                    <a class="navbar-brand" href="/features" style="font-size: 25px;">Chrome Platform Status</a>
+                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/roadmap">Roadmap</a>
                 </li>
