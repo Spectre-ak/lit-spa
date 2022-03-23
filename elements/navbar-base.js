@@ -33,10 +33,7 @@ export class NavbarTopBase extends LitElement {
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/metrics">Stats</a>
-                </li> 
-                <li class="nav-item">
-                    <a class="nav-link" href="/custom">Test Element</a>
-                </li> 
+                </li>
             </ul>
             </div>
         </nav>

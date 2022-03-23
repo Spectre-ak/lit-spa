@@ -15,14 +15,7 @@ import {LitElement, html, css} from 'lit';
  */
 export class MyElement extends LitElement {
   static get styles() {
-    return css`
-      :host {
-        display: block;
-        border: solid 1px gray;
-        padding: 16px;
-        max-width: 800px;
-      }
-    `;
+    return css``;
   }
 
   static get properties() {
@@ -50,28 +43,13 @@ export class MyElement extends LitElement {
 
   render() {
     return html`
-      <h1>${this.sayHello(this.name)}!</h1>
-      <button @click=${this._onClick} part="button">
-        Click Count: ${this.count}
-      </button>
-      <slot></slot>
+      <h4>Component is not ready for this route.......</h4>
+      <div style="padding-left:50px">
+        <a href=${this.location.params["0"]}> ${(this.location.params["0"])}</a>
+      </div>
     `;
   }
 
-  _onClick() {
-    console.log("asdad");
-    this.count++;
-    //this.dispatchEvent(new CustomEvent('count-changed'));
-  }
-
-  /**
-   * Formats a greeting
-   * @param name {string} The name to say "Hello" to
-   * @returns {string} A greeting directed at `name`
-   */
-  sayHello(name) {
-    return `Hello, ${name}`;
-  }
 }
 
 window.customElements.define('my-element', MyElement);
