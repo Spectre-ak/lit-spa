@@ -4,8 +4,11 @@ export class NavbarTopBase extends LitElement {
   static styles = css`
   nav ul {list-style-type: none;margin: 0;overflow: hidden;background-color: #333;}
   nav ul li a {clear float: right;}
-  nav ul li  a {display: block;color: white;text-align: center;padding: 14px 16px;}
-  nav ul li {display: inline-block;}`;
+  nav ul li  a {display: block;color: white;text-align: center;padding: 14px 16px; text-decoration: none;}
+  nav ul li {display: inline-block;}  nav ul li:hover {
+    background: #c1bbbb!important;
+}
+`;
 
   static properties = {
     text: {type: String},

@@ -6,13 +6,7 @@
 
 import {LitElement, html, css} from 'lit';
 
-/**
- * An example element.
- *
- * @fires count-changed - Indicates when the count changes
- * @slot - This element has a slot
- * @csspart button - The button
- */
+
 export class MyElement extends LitElement {
   static get styles() {
     return css``;
