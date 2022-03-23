@@ -38,6 +38,7 @@ export class MyElement extends LitElement {
        * @type {number}
        */
       count: {type: Number},
+      location: {attribute: false}
     };
   }
 
