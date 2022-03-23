@@ -36,6 +36,9 @@ export class AllFeaturesBase extends LitElement {
   }
   render() {
     return html`
+      Features: 2048
+
+      Proposed
        <chromedash-feature heading="${this.data.heading[0]}" summary="${this.data.summary[0]}" description="${this.data.description[0]}" link="${this.data.link[0]}"></chromedash-feature>)}
        <chromedash-feature heading="${this.data.heading[1]}" summary="${this.data.summary[1]}" description="${this.data.description[1]}" link="${this.data.link[1]}"></chromedash-feature>)}
        <chromedash-feature heading="${this.data.heading[2]}" summary="${this.data.summary[2]}" description="${this.data.description[2]}" link="${this.data.link[2]}"></chromedash-feature>)}

@@ -1,10 +1,10 @@
-import './elements/my-element';
+import './elements/not-found-page';
 import './elements/all-features-base';
 import './elements/loader-topbar';
 import './elements/roadmap-base';
 import './elements/stats-base';
 import './elements/navbar-base'
-
+import './elements/chrome-feature'
 import { Router }  from '@vaadin/router';
 
 
@@ -15,6 +15,7 @@ router.setRoutes([
   {path: '/features', component: 'all-features-base'},
   {path: '/roadmap', component: 'roadmap-base'},
   {path: '/metrics', component: 'stats-base'},
-  {path: '(.*)', component: 'my-element'},
+  {path: '/feature/:featureId', component: 'chrome-feature'},
+  {path: '(.*)', component: 'my-element'}
 ]);
 

@@ -29,7 +29,7 @@ export class NavbarTopBase extends LitElement {
                     <a class="nav-link" href="/roadmap">Roadmap</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/features">Features</a>
+                    <a class="nav-link" href="/features">All Features</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/metrics">Stats</a>
