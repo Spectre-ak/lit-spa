@@ -34,8 +34,8 @@ export class RoadmapMilestones extends LitElement {
   }
   render() {
     return html`
-    <div>msg is here: ${this.rootMsg}</div>
-    <input type="text" @input=${this._dispatchEventParent} value = "${this.rootMsg}"/>
+    <div>Child element msg: ${this.rootMsg}</div>
+    <input type="text" @input=${this._dispatchEventParent} placeholder="Send val to parent component"/>
     <section class="release">
         <!--?lit$0616643716$-->
         <div class="layout vertical center">
