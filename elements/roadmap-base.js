@@ -27,9 +27,9 @@ export class RoadmapBase extends LitElement {
   }
   render() {
     return html`
-    <input type="text" @input=${this._change} value = "${this.rootMsg}"/>
+    <input type="text" @input=${this._change} placeholder="Send val to child components"/>
     <div>
-      Msg is here: ${this.rootMsg}
+      Base element msg: ${this.rootMsg}
     </div>
     <div class="container">
       <div>
