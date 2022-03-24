@@ -12,15 +12,30 @@ export class RoadmapMilestones extends LitElement {
             betaDate: {type: String},
             betaDateState: {type: String},
             stableDate: {type: String},
-            stableDateAgo: {type: String}
+            stableDateAgo: {type: String},
+            rootMsg: {type: String}
         };
     }
 
   constructor() {
     super();
   }
+
+  _dispatchEventParent(){
+    this.rootMsg = this.renderRoot.querySelector('input').value;
+    const data = this.rootMsg;
+    const options = {
+        detail: {data},
+        bubbles: true,
+        composed: true,
+      };
+    this.dispatchEvent(new CustomEvent('updaterRoot', options));
+    console.log('dispatched');
+  }
   render() {
     return html`
+    <div>msg is here: ${this.rootMsg}</div>
+    <input type="text" @input=${this._dispatchEventParent} />
     <section class="release">
         <!--?lit$0616643716$-->
         <div class="layout vertical center">
