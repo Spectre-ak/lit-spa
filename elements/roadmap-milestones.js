@@ -35,7 +35,7 @@ export class RoadmapMilestones extends LitElement {
   render() {
     return html`
     <div>msg is here: ${this.rootMsg}</div>
-    <input type="text" @input=${this._dispatchEventParent} />
+    <input type="text" @input=${this._dispatchEventParent} value = "${this.rootMsg}"/>
     <section class="release">
         <!--?lit$0616643716$-->
         <div class="layout vertical center">

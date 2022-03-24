@@ -19,3 +19,4 @@ router.setRoutes([
   {path: '(.*)', component: 'not-found-page'}
 ]);
 
+window.state = {};

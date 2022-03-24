@@ -23,10 +23,11 @@ export class RoadmapBase extends LitElement {
     this.data = {
       feature: 'feature_0'
     }
+    this.rootMsg = window.state.rootMsg === null ? "" : window.state.rootMsg;
   }
   render() {
     return html`
-    <input type="text" @input=${this._change} />
+    <input type="text" @input=${this._change} value = "${this.rootMsg}"/>
     <div>
       Msg is here: ${this.rootMsg}
     </div>
@@ -53,9 +54,10 @@ export class RoadmapBase extends LitElement {
       console.log(e.detail.data);
       this.rootMsg=e.detail.data;
     }
+    this._saveState();
   }
-  _up(e){
-    console.log(e);
+  _saveState(){
+    window.state['rootMsg'] = this.rootMsg;
   }
 }
 
